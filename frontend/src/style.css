@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ReactCrop overrides */
+.ReactCrop__crop-selection {
+  border: 2px solid #58a6ff !important;
+}
+
+.ReactCrop__drag-handle {
+  background-color: #58a6ff !important;
+  border: none !important;
+  width: 10px !important;
+  height: 10px !important;
+}
