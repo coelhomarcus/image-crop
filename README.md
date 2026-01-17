@@ -12,14 +12,14 @@ Crop/
 └── backend/     # API de processamento de GIFs (Node.js + Express)
 ```
 
-### [frontend](./frontend)
+### Frontend
 
 Interface web para upload e recorte de imagens e GIFs.
 
 - **Tecnologias**: React, Vite, TypeScript, Tailwind CSS
-- **Porta**: 80
+- **Porta**: 5175 
 
-### [backend](./backend)
+### Backend
 
 API para processamento e recorte de GIFs animados usando Gifsicle.
 
@@ -35,7 +35,7 @@ Cada projeto deve ser deployado como uma **Application** separada:
 1. Crie uma nova Application no Dokploy
 2. Aponte para o repositório com **Build Path**: `/backend`
 3. Configure:
-   - **Container Port**: `3001`
+   - **Container Port**: `3001` (default)
    - **Environment Variables**: `PORT=3001`, `NODE_ENV=production`
 4. Gere um domínio (ex: `api.seudominio.com`)
 5. Deploy
@@ -45,7 +45,7 @@ Cada projeto deve ser deployado como uma **Application** separada:
 1. Crie uma nova Application no Dokploy
 2. Aponte para o repositório com **Build Path**: `/frontend`
 3. Configure:
-   - **Container Port**: `80`
+   - **Container Port**: `5175`
    - **Build Args**: `VITE_API_URL=https://api.seudominio.com` (URL do backend)
 4. Gere um domínio (ex: `crop.seudominio.com`)
 5. Deploy
